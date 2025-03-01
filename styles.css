@@ -1,6 +1,8 @@
 body {
     text-align: center;
     background-color: #011F3F;
+    margin: 0;
+    padding: 0;
 }
 
 #level-title {
@@ -12,8 +14,14 @@ body {
 
 .container {
     display: block;
-    width: 50%;
+    width: 80%;
     margin: auto;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 a {
@@ -24,19 +32,20 @@ a {
 footer {
     color: #DBEDF3;
     font-family: "Arvo", cursive;
+    margin-top: 20px;
 }
 
 .btn {
-    margin: 25px;
+    margin: 10px;
     display: inline-block;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border: 10px solid black;
     border-radius: 20%;
     font-family: 'Press Start 2P', cursive;
-    font-size: 3rem;
+    font-size: 2rem;
     color: white;
-    line-height: 200px;
+    line-height: 150px;
     text-align: center;
     cursor: pointer;
     transition: transform 0.2s, box-shadow 0.2s;
@@ -71,4 +80,38 @@ footer {
 .pressed {
     box-shadow: 0 0 20px white;
     background-color: grey;
+}
+
+@media (max-width: 768px) {
+    .btn {
+        height: 100px;
+        width: 100px;
+        font-size: 1.5rem;
+        line-height: 100px;
+    }
+
+    #level-title {
+        font-size: 2rem;
+    }
+
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .btn {
+        height: 80px;
+        width: 80px;
+        font-size: 1.2rem;
+        line-height: 80px;
+    }
+
+    #level-title {
+        font-size: 1.5rem;
+    }
+
+    .container {
+        width: 100%;
+    }
 }
